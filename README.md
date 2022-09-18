@@ -13,19 +13,20 @@ ___________________________________________________________________
 - [High Level Requirements](#high_level)
 - [Introduction](#introduction)
 
+Software Development Plan
 1. [Agile Process](#agile)
-    1. [Analysis](#analysis)
-    2. [Design](#design)
-    3. Development
-    4. Testing
-    5. Deployment
-2. Software Development Plan
-3. Features 
-4. Control Flow Diagram
-5. User Interface and Experience
-6. Implementation Plan
+2. [Analysis](#analysis)
+3. [Design](#design)
+   * Includes Control Flow Diagram and Key
+4. [Features](#features)
+5. [Set Up](#setup) 
+6. Development
 7. Testing
-8. Install Instructions
+8. Deployment
+9.  User Interface and Experience
+10. Implementation Plan
+11. Testing
+12. Install Instructions
 
 * [Important Links](#links)
 * [Reference List](#references)
@@ -47,7 +48,8 @@ ___________________________________________________________________
 ## Introduction<a name="introduction"></a>
 
 Welcome Space Traveller! 
-This is a choose your own adventure story. A mysterious creature has transported you to a remote outpost station in Space. You don’t recognise the stars or planets, but outside you see a rainbow of colours that take your breath away, you must be in a nursery nebula. 
+
+This is a choose your own adventure story. A mysterious creature has transported you to a remote outpost station in Space. You don’t recognise the stars or planets, but outside you see a rainbow of colours that take your breath away. You must be in a nursery nebula. 
 
 To help the mysterious creature you will be asked to make decisions and input your responses on your journey. 
 Along the way you may encounter some challenges and puzzles to test your skills and knowledge! 
@@ -63,13 +65,88 @@ The below is a documentation of the Software Development Cycle for the Terminal 
 
 
 ## Analysis<a name="analysis"></a>
+As the product owner, stakeholder, developer and tester for the Terminal Application, the best place to start is the very beginning. The analysis. What do I want to build that will demonstrate my abilities as a developer and use a range of tools to achieve that. 
+
+1. **Identify the requirements**
 
 
-### Design<a name="design"></a>
+Through the use of tools such as miro, I can use a virtual whiteboard to help me visualize my ideas and expand on them. [Miro White Board Terminal App](https://miro.com/app/board/uXjVPX0yzdY=/)
+
+![Miro White Board Requirement Gathering](images/miro_requirements.png)
+
+2.  **Brainstorm an idea that fits the requirements**
+   
+ Thinking of my skill set as this being my very first attempt as a Terminal Application, I decided on something within my skill range. A choose your own adventure style of application that will strengthen my knowledge of control flow and creating functions.
+
+* Create and display input fields that can make use of various data types 
+* Use Control Flow
+* Create Variables
+* Create Functions 
+* Make sure of Loops for challenges 
+* Expand my experience with importing modules and packages to help in achieving some of these challenges. 
+
+3. **Opportunity Canvas**
+
+I expanded on the basic foundations on what I would like to achieve with my Terminal Application. Even though this isn’t a business strategy, I found it still helpful to focus on what and why I want to achieve and who my end user is. 
+
+![Opportunity Canvas](images/opportunity_canvas.png)
+
+**Analysis Results:**
+* Easy to read / follow along story
+* Easy to understand inputs and enter in details
+* Easy/ Medium/ Hard Challenges 
+* Entertaining story line 
+* Keping in line with the an Adventure - it will have a series of challenges 
+
+__________________________________________________________________
+
+## Design<a name="design"></a>
+
+Next is to design the Terminal Application now that I understand who my end user is and what I would like this game to achieve. 
+
+* Flowchart 
+* Design - PEP 8
+* Challenges (What are they and how many) 
+* Identifying the Story line - The Theme (It's Space)
+
+![Flow Chart Version 2](images/flowchart_v2.png)
+![Flow Chart Key](images/flowchart_key.png)
 
 
+## Features<a name="features"></a>
 
+1. Feature 1: Be part of the story
 
+Enter your name and see yourself amongst the story line. The mysterious creature interacting with you along your journey as you help to save the world! 
+
+2. Feature 2: Different Story Lines
+   
+Every decision you face will determine your outcome. Choose a different path each time to find a new story line. 
+
+3. Feature 3: Test your skills with challenges
+
+In this story you will need your wits and skills, or was that blind luck to solve the puzzles. Keeping the adventure interesting with fun interactive challenges. 
+
+___________________________________________________________________
+
+## Set Up<a name="setup"></a>
+Setting up for success requires a little bit of planning. With the help of Trello, I was able to enter in my tasks as Epics and break those out into User Stories/Features. Each Story/Feature had a list of Acceptance Criteria to achieve. 
+
+[Trello - Choose Your Own Adventure](https://trello.com/b/KSBbpWHq/choose-your-own-adventure-terminal-app)
+
+![Screenshot of Trello Progress](images/trello.png)
+
+**Columns:**
+* High Level Requirements (Epics)
+* Backlog (All Tickets to work off)
+* Blocked - Sometimes you need a Hard Basket to come back to or are waiting on something before it can be closed. 
+* In Pogress - A few tickets at the same time, but not taking on too many
+* Review - This will come in handy for code, when I go back and refactor
+* Done - Best column of all. This is where all the acceptance criteria has been met or definition of done is completed
+
+Example of a Ticket with Acceptance Critieria
+
+![Example of Acceptance Criteria](images/acceptance.png)
 ___________________________________________________________________
 
 ## Important Links<a name="links"></a>
@@ -94,4 +171,4 @@ ___________________________________________________________________
 * Lucidchart, 2022, [What is a Flowchart](https://www.lucidchart.com/pages/what-is-a-flowchart-tutorial#top), accessed 15 Sep 2022
 * Python, 2022, [PEP 8 Style Guide for Python Code](https://peps.python.org/pep-0008/), accessed 16 Sep 2022
 * NASA, 2022 [Heading Into (Orbital) Sunrise](https://www.nasa.gov/multimedia/imagegallery/iotd.html), accessed 19 Sep 2022
-* 
+  
