@@ -2,7 +2,6 @@
 
 # Imported Modules
 
-from tkinter import Y
 from src import number_guess
 
 # Instructions 
