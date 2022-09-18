@@ -1,5 +1,10 @@
 # Choose Your Own Adventure Application 
 
+# Imported Modules
+
+from tkinter import Y
+from src import number_guess
+
 # Instructions 
 print('*********************************************************************************************')
 print('Welcome!')
@@ -10,13 +15,12 @@ print('Along the way the mysterious creature will ask you questions, also you ma
 print('To wake up from this strange dream, if it even is a dream, type in quit() at any time.\n')
 
 # Are you ready to begin Control Flow
-start_adventure = input("Are you ready for your journey? (Yes/No) \n").capitalize()
+start_adventure = input("Are you ready for your journey? (Yes/No) \n").lower()
 
 while True:
-    if start_adventure == "Yes":
+    if start_adventure == "yes" or start_adventure == "y":
         print('Lets begin!\n')
     
-
 # Main Story 
 
         print('Welcome Space Traveller')
@@ -45,9 +49,11 @@ while True:
         elif challenge_one == "panel":
             print("\nYou sqeeze into the tight space, quickly covering the panel back into place. Holding your breath waiting and listening!\nNext minute you hear slithering sounds near your panel.\nThen a loud thump on the panel!\nThe panel opens to reveal...\nYou passed out!") 
         else:
-            print("\nYou try to push the door. Oh no! Its stuck. But you gave it a hard push and it swooshes open.\nOnly to reveal a room full of poisionous plants!\nYou accidentally brushed against one in your haste and start to feel sick. What are these purple lumps on you?\nOn no... as you swell up and POP!\nYou DEAD!")
+            print("\nYou try to push the door. Oh no! Its stuck. But you gave it a hard push and it swooshes open.\nOnly to reveal a room full of poisionous plants!\nYou accidentally brushed against one in your haste and start to feel sick. On no... you start to swell up!\n")
+            guess = number_guess("Looking around you, you see three bottles of gooey liquid.\nOne of them must be the antidote!\nQuick, which bottle do you choose? Guess a number (1-10) or Guess a letter (A-Z): \n")
+            print(f"You quikcly grab the bottle with the label, {guess} on it and drink it!\nOn no... you don't feel so good now...\nLast thing you hear is, {traveller_name}, that wasn't antidote!\nYou DEAD.")
+        break
 
-    
     else: 
         print('Maybe next time.!')
         break
