@@ -70,7 +70,8 @@ As the product owner, stakeholder, developer and tester for the Terminal Applica
 1. **Identify the requirements**
 
 
-Through the use of tools such as miro, I can use a virtual whiteboard to help me visualize my ideas and expand on them. [Miro White Board Terminal App](https://miro.com/app/board/uXjVPX0yzdY=/)
+Through the use of tools such as miro, I can use a virtual whiteboard to help me visualize my ideas and expand on them. 
+[Miro White Board Terminal App](https://miro.com/app/board/uXjVPX0yzdY=/)
 
 ![Miro White Board Requirement Gathering](images/miro_requirements.png)
 
@@ -82,7 +83,7 @@ Through the use of tools such as miro, I can use a virtual whiteboard to help me
 * Use Control Flow
 * Create Variables
 * Create Functions 
-* Make sure of Loops for challenges 
+* Make use of Loops for challenges 
 * Expand my experience with importing modules and packages to help in achieving some of these challenges. 
 
 3. **Opportunity Canvas**
@@ -96,7 +97,7 @@ I expanded on the basic foundations on what I would like to achieve with my Term
 * Easy to understand inputs and enter in details
 * Easy/ Medium/ Hard Challenges 
 * Entertaining story line 
-* Keping in line with the an Adventure - it will have a series of challenges 
+* Keeping in line with the an Adventure - it will have a series of challenges 
 
 __________________________________________________________________
 
@@ -130,7 +131,7 @@ In this story you will need your wits and skills, or was that blind luck to solv
 ___________________________________________________________________
 
 ## Set Up<a name="setup"></a>
-Setting up for success requires a little bit of planning. With the help of Trello, I was able to enter in my tasks as Epics and break those out into User Stories/Features. Each Story/Feature had a list of Acceptance Criteria to achieve. 
+Setting up for success requires a little bit of planning. With the help of Trello, I was able to enter in my tasks as Epics and break those out into User Stories/Features. Each Story/Feature has a list of Acceptance Criteria to achieve. 
 
 [Trello - Choose Your Own Adventure](https://trello.com/b/KSBbpWHq/choose-your-own-adventure-terminal-app)
 
@@ -140,7 +141,7 @@ Setting up for success requires a little bit of planning. With the help of Trell
 * High Level Requirements (Epics)
 * Backlog (All Tickets to work off)
 * Blocked - Sometimes you need a Hard Basket to come back to or are waiting on something before it can be closed. 
-* In Pogress - A few tickets at the same time, but not taking on too many
+* In Progress - A few tickets at the same time, but not taking on too many
 * Review - This will come in handy for code, when I go back and refactor
 * Done - Best column of all. This is where all the acceptance criteria has been met or definition of done is completed
 

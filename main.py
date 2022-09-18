@@ -3,6 +3,7 @@
 # Imported Modules
 
 from src import number_guess
+import random
 
 # Instructions 
 print('*********************************************************************************************')
@@ -20,7 +21,7 @@ while True:
     if start_adventure == "yes" or start_adventure == "y":
         print('Lets begin!\n')
     
-# Main Story 
+# Main Story - Asks Traveller Name
 
         print('Welcome Space Traveller')
         print('I have brought you here as we are in grave danger and I need your help!')
@@ -28,25 +29,37 @@ while True:
         print('The mysterious creature is looking at you and asks.')
         traveller_name = input('What shall I call you?\n')
         print(f'Ah excellent, it is a bit hard for me to say this, but I will call you {traveller_name}!\n')
-        print(f'The mysterious creature points ahead of you and says, {traveller_name} we need to go that way')
+        print(f'The mysterious creature points ahead of you and says, {traveller_name} we need to go that way.')
 
-        challenge_one = input("Ahead of you is a door, right next to you is a loose panel, or do you make a run for it! What do you do? Type: (door) / (panel) or (run)\n").lower().strip()
+# Loops Story A, Story B and Story c
+
+        challenge_one = input("Except you hear something coming. Ahead of you is a door, right next to you is a loose panel, or do you make a run for it? What do you do? Type: (door) / (hide) or (run)\n").lower().strip()
         if challenge_one == "run":
-            print("\nYou take off running the other direction from the noise.\nOnce you turn the corner you press yourself against the metal walls listening carefully for any noise.\n")
+            print("\nYou take off running.\nOnce you turn the corner you press yourself against the metal walls listening carefully for any noise.\n")
             challenge_two = input("But then you see a small fluffy creature with big eyes.\nDo you trust it and pick it up? Type: (Yes) / (No)\n").lower().strip()
             if challenge_two == "no":
-                print(f"\nOh hell no you say! Your mysterious friend smiles at you wisely and says '{traveller_name}, a wise decision, they can bite your hand off!'.\n")
-                challenge_three = input(f"{traveller_name}, we really must go, there is ...")
-                if challenge_three == "Yes":
-                    print("Yes!")
-                elif challenge_three == "No":
-                    print("Oh no :( ")
+                print(f"\nOh hell no you say! Your mysterious friend smiles at you wisely and says, '{traveller_name}, a wise decision, they can bite your hand off!'.\n")
+                challenge_three = input(f"{traveller_name}, we really must go, but before we can we need to get past the creature. Should we feed this creature. Type: (Yes) / (No)\n").lower().strip()
+                if challenge_three == "yes":
+                    print("Good idea, lets feed it.")
+                    choose_container = int(input("You see two containers near it. Which container do you feed it? The one labelled 0 or 1? Enter a number (0) or (1):\n"))
+                    random_bottle = random.randint(0, 1)
+                    if random_bottle == 0:
+                        print("You open the container and throw the food at it. Look! He its eating what is inside!")
+                        print(f"Your mysterious friend looks at you and then says, '{traveller_name}, THANK YOU! As it picks up the fluffy creature.\nI am unable to touch these containers and needed help your to feed Nog here.\nLet me take you back home!")
+                        print("Next thing you remember is waking up in your own bed. Was that a dream you think?")
+                    else:
+                        print("Oh no... I don't think that was the right one, as the last thing you see is the fluffy creature lunging for your face!\nYou DEAD.")
+                elif challenge_three == "no":
+                    print("That was a bad mistake! As you try to leave the fluffy creature lunges for your face. The last thing you remember is the immeense pain.\nYou DEAD.")
                 else:
-                    print("What just happened?")
-            else:
+                    print("What just happened?\nYou DEAD.")    
+            elif challenge_two == "yes":
                 print("\nAww how cute you think to youself.\nAs you reach out with your hand you see this giant mouth open wide with razor sharp teeth!\nIn an instance your arm is bitten off and you pass out from blood loss.\nYou DEAD!")
-        elif challenge_one == "panel":
-            print("\nYou sqeeze into the tight space, quickly covering the panel back into place. Holding your breath waiting and listening!\nNext minute you hear slithering sounds near your panel.\nThen a loud thump on the panel!\nThe panel opens to reveal...\nYou passed out!") 
+            else:
+                print("What just happened?\nYou DEAD.")
+        elif challenge_one == "hide":
+            print("\nYou sqeeze into the tight space, quickly covering the panel back into place. Holding your breath waiting and listening!\nNext minute you hear slithering sounds near your panel.\nThen a loud thump on the panel!\nThe panel opens to reveal...\n") 
         else:
             print("\nYou try to push the door. Oh no! Its stuck. But you gave it a hard push and it swooshes open.\nOnly to reveal a room full of poisionous plants!\nYou accidentally brushed against one in your haste and start to feel sick. On no... you start to swell up!\n")
             guess = number_guess("Looking around you, you see three bottles of gooey liquid.\nOne of them must be the antidote!\nQuick, which bottle do you choose? Guess a number (1-10) or Guess a letter (A-Z): \n")
