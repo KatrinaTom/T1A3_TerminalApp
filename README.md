@@ -20,13 +20,12 @@ Software Development Plan
    * Includes Control Flow Diagram and Key
 4. [Features](#features)
 5. [Set Up](#setup) 
-6. Development
-7. Testing
+6. [Development](#development)
+7. [Testing](#testing)
 8. Deployment
 9.  User Interface and Experience
 10. Implementation Plan
-11. Testing
-12. Install Instructions
+11. Install Instructions
 
 * [Important Links](#links)
 * [Reference List](#references)
@@ -148,6 +147,51 @@ Setting up for success requires a little bit of planning. With the help of Trell
 Example of a Ticket with Acceptance Critieria
 
 ![Example of Acceptance Criteria](images/acceptance.png)
+
+___________________________________________________________________
+
+# Development<a name="development"></a>
+
+
+
+
+
+____________________________________________________________________
+
+# Testing<a name="testing"></a>
+
+Link to Testing Plan:
+
+[Google Documents - Acceptance Testing](https://docs.google.com/spreadsheets/d/11MfBISdv7bes_b3W9-2sHLohp8e025O8-VJ1_nbUH4c/edit#gid=0)
+
+![Screenshot of Testing Plan - Acceptance Testing for Choose Your Own Adventure](images/Testing.png)
+
+Example of a test (Happy Flow and Negative (sad) Flow)
+* This is to handle error handling for postive experience, entering in a string
+* The negative (sad) flow captures when the opposite happens. In this case, an integar or a random character entered. 
+* End result is that this case captures and handles the ``else`` statement
+
+! Testing Instructions match the Expected Results, the test is set as PASS.
+  
+![Example of Test Case for input field](images/example_test.png)
+
+
+Steps
+1. Write up a manual testing plan 
+2. Capture all scenarios and error handling (Happy and Sad paths)
+3. Where error handling is missing, add error handling
+4. Introduce pytest for tests that can be run as a unit test
+
+**Notes**
+
+Overall I found that this to be a manual testing plan with user acceptance tests. Due to the control flow statements, majority of the error handling of data types (strings and integars) are handled by the ``else:`` statement. 
+
+Another learning experience was making sure the user was not trapped in a loop and ensuring a ``break`` statement ``While True:``
+
+The challenges/tests could be tested with Validation Error handling and pytest.
+
+TOTAL User Acceptance Tests = 
+
 ___________________________________________________________________
 
 ## Important Links<a name="links"></a>
