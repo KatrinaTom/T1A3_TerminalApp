@@ -3,6 +3,7 @@
 # Imported Modules
 from src import number_guess
 import random
+from sys import argv
 
 # Instructions 
 print('*********************************************************************************************')
@@ -93,7 +94,7 @@ while True:
         break
 
     else: 
-        print('Maybe next time.!')
+        print('Maybe next time.')
         break
 
 
