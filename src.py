@@ -7,7 +7,7 @@ def number_guess(prompt):
         try: 
              result = int(user_input)
         except ValueError:
-            print("That wasn't the right one, try maybe the bottle with a number?\n\n")
+            print("This one looks weird, try a different bottle with a number?\n\n")
     return result
 
 
