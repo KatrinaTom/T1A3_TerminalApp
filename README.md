@@ -25,7 +25,7 @@ Software Development Plan
 8. Deployment
 9.  User Interface and Experience
 10. Implementation Plan
-11. Install Instructions
+11. [Install Instructions](#install)
 
 * [Important Links](#links)
 * [Reference List](#references)
@@ -192,7 +192,35 @@ The challenges/tests could be tested with Validation Error handling and pytest.
 
 TOTAL User Acceptance Tests = 
 
-___________________________________________________________________
+_______________________________________________________
+
+# Install Instructions<a name="install"></a>
+
+1. Open Terminal/Command Line Prompt (Mac OS and Windows OS)
+
+**shortcut:** 
+
+On MAC Operating System
+
+command + spacebar (This opens Search)
+Type Terminal to open 
+
+2. git clone - Copy, paste the following into Terminal
+
+```git clone git@github.com:KatrinaTom/T1A3_TerminalApp.git```
+
+3. Navigate to the folder on your computer (Folder is called T1A3)
+
+```cd T1A3```
+
+4. Copy, paste the following command into Terminal
+
+```./wrapper.sh```
+
+5. See Welcome message. Have fun on your Space Adenture!
+
+
+_______________________________________________________
 
 ## Important Links<a name="links"></a>
 
