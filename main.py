@@ -4,6 +4,7 @@
 from src import number_guess
 import random
 from sys import argv
+import clearing
 
 # Instructions 
 print("*******************************************************************************")
@@ -20,25 +21,28 @@ start_adventure = input("Are you ready for your journey? (Yes/No):\n").lower()
 while True:
     if start_adventure == "yes" or start_adventure == "y":
         print('Lets begin!\n')
+        clearing.clear()
 
 # Main Story - Asks Traveller Name
 
         print("Welcome Space Traveller")
         print("I have brought you here as we are in grave danger and I need your help!")
-        print("You look around and realise you have been transported to the distant future where everything looks strange and computerised.")
+        print("You look around and realise you have been transported to the distant future.")
         print("The mysterious creature is looking at you and asks.")
         traveller_name = input("What shall I call you?\n")
-        print(f"Ah excellent, it is a bit hard for me to say this, but I will call you {traveller_name}!\n")
+        print(f"It is a bit hard for me to say this, but I will call you {traveller_name}!")
         print(f"The mysterious creature points ahead of you and says, '{traveller_name}, we need to go that way.'")
+        clearing.clear()
 
 # Loops Story A, Story B and Story C
-
-        challenge_one = input("Except you hear something coming. Ahead of you is a door, right next to you is a loose panel, or do you make a run for it? What do you do? Type: (door) / (hide) or (run)\n").lower().strip()
+        
+        challenge_one = input("Except you hear something coming.\nAhead of you is a door, next to you is a loose panel, or do you make a run for it? What do you do? Type: (door) / (hide) or (run)\n").lower().strip()
+        clearing.clear()
         if challenge_one == "run":
             print("\nYou take off running!\nOnce you turn the corner you press yourself against the metal walls listening carefully for any noise.\n")
             challenge_two = input("But then you see a small fluffy creature with big eyes.\nDo you trust it and pick it up? Type: (Yes) / (No)\n").lower().strip()
             if challenge_two == "no" or challenge_two == "n":
-                print(f"\nOh hell no you say! Your mysterious friend smiles at you wisely and says, '{traveller_name}, a wise decision, they can bite your hand off!'./n")
+                print(f"Oh hell no you say! Your mysterious friend smiles at you wisely and says, '{traveller_name}, a wise decision, they can bite your hand off!'./n")
                 challenge_three = input(f"'{traveller_name}, we really must go, but before we can we need to get past the creature. Should we feed this creature.' Type: (Yes) / (No)/n").lower().strip()
                 if challenge_three == "yes" or challenge_three == "y":
                     print("Good idea, lets feed it.")
@@ -59,10 +63,10 @@ while True:
             else:
                 print("What just happened?\nYou DEAD.")
         elif challenge_one == "hide":
-            print("\nYou sqeeze into the tight space, quickly covering the panel back into place.\nNext minute you hear a thump on the panel as it opens to reveal the mysterious creature looking at you.")
+            print("You sqeeze into the tight space, quickly covering the panel back into place.\nNext minute you hear a thump on the panel as it opens to reveal the mysterious creature looking at you.")
             challenge_four = input(f"'It's safe {traveller_name}'. Do you leave your hiding spot? Type: (Yes) / (No)\n").lower().strip()
             if challenge_four == "yes" or challenge_four == "y":
-                print("\nFollow me, I found somehing I want to show you.")
+                print("Follow me, I found somehing I want to show you.")
                 print("The mysterious creature shows you a small metallic box, with etchings and a keypad on it.\nYou see the first letter as an 'S' and the last letter as a 'E'.")
                 def check_password():
                     password = "space"
@@ -79,9 +83,12 @@ while True:
             else: 
                 print("You start shaking uncontrollably. What is going on you think as your body heats up to a burning fury!\nYou DEAD.")
         else:
-            print("\nYou push the door to reveal a room full of poisionous plants!\nYou accidentally brushed against one in your haste and start to feel sick. On no... you start to swell up!\n")
+            print("You push the door to reveal a room full of poisionous plants!\nYou accidentally brushed against one in your haste and start to feel sick. On no... you start to swell up!\n")
             guess = number_guess("Looking around you, you see three bottles of gooey liquid. One of them must be the antidote!\nQuick, which bottle do you choose? Guess ANY number or letter: \n")
-            print(f"You quickly grab the bottle with the label, {guess} on it and drink it!\nOn no... you don't feel so good now...\nLast thing you hear is, {traveller_name}, that wasn't antidote!\nYou DEAD.")
+            print(f"You quickly grab the bottle with the label, {guess} on it and drink it!")
+            print("On no... you don't feel so good...")
+            print(f"Last thing you hear is, {traveller_name}, that wasn't antidote!")
+            print("You DEAD.")
         break
 
     else: 
