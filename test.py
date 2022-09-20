@@ -1,26 +1,21 @@
-# Choose Your Own Adventure Application 
 
-# Imported Modules
-from src import number_guess
-import random
-from sys import argv
-
-# Instructions 
-print("*******************************************************************************")
-print("Welcome!")
-print("The instructions are simple.")
-print("A mysterious creature has transported you to a remote outpost station in Space.")
-print("You don\'t recognise the stars or planets, but outside you see a rainbow of colours that take your breath away, you must be in a stellar nursery.")
-print("Along the way the mysterious creature will ask you questions, also you may encounter some challenges and puzzles to test your skills and knowledge!")
-print("To wake up from this strange dream, if it even is a dream, close the Terminal Application at any time.\n")
-
-# Are you ready to begin Control Flow
+        
 start_adventure = input("Are you ready for your journey? (Yes/No):\n").lower()
 
 while True:
     if start_adventure == "yes" or start_adventure == "y":
         print('Lets begin!\n')
 
+        
+
+        if input == "quit":
+            break
+        else:
+            print("Continue with the adventure")
+
+    
+
+    
 # Main Story - Asks Traveller Name
 
         print("Welcome Space Traveller")
@@ -87,8 +82,3 @@ while True:
     else: 
         print('Maybe next time.')
         break
-
-
-  
-
- 
