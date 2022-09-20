@@ -167,7 +167,7 @@ Link to Testing Plan:
 ![Screenshot of Testing Plan - Acceptance Testing for Choose Your Own Adventure](images/Testing.png)
 
 Example of a test (Happy Flow and Negative (sad) Flow)
-* This is to handle error handling for postive experience, entering in a string
+* This is to handle error handling for positive experience (entering in a string)
 * The negative (sad) flow captures when the opposite happens. In this case, an integar or a random character entered. 
 * End result is that this case captures and handles the ``else`` statement
 

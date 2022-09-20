@@ -71,13 +71,13 @@ while True:
             challenge_four = input(f"'It's safe {traveller_name}'. Do you leave your hiding spot? Type: (Yes) / (No)\n").lower().strip()
             if challenge_four == "yes" or challenge_four == "y":
                 print("\nFollow me, I found somehing I want to show you.")
-                print("The mysterious creature shows you a small metalic box, with etchings and a keypad on it.\nYou see the first letter as an 'S' and the last letter as a 'E'.")
+                print("The mysterious creature shows you a small metallic box, with etchings and a keypad on it.\nYou see the first letter as an 'S' and the last letter as a 'E'.")
                 def check_password():
                     password = "space"
                     while input("What do you think the password could be? Enter your guess to see if it works:\n").lower().strip() != password:
-                        print("You hear a loud noise with a mechanical voice repeating, 'Error, Error, Error'/nTry again\n")
+                        print("You hear a loud noise with a mechanical voice repeating, 'Error, Error, Error'\nYou try again\n")
                     print("\nYou hear a click and a whir of noises as the box opens to display a minuture galaxy.")
-                    print(f"'{traveller_name}, you foud it! I was looking for my home world and here it is. You SAVED my World!")
+                    print(f"'{traveller_name}, you found it! I was looking for my home world and here it is. You SAVED my World!")
                     print("A blinding flash of light errupts and you pass out. Only to wake up in your backyard under a sky full of stars.")
                     print("THE END")
                 check_password()
