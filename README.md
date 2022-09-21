@@ -215,9 +215,9 @@ Type Terminal to open
 
 4. Copy, paste the following command into Terminal
 
-```./wrapper.sh```
+```./start.sh```
 
-5. See Welcome message. Have fun on your Space Adenture!
+1. See Welcome message. Have fun on your Space Adenture!
 
 
 _______________________________________________________

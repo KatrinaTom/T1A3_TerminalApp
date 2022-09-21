@@ -8,6 +8,7 @@ import clearing
 from instructions import instructions
 from src import restart_game
 from main_story import main_story
+from you_died import you_died
 
 def main():
 # Instructions 
@@ -23,20 +24,31 @@ def main():
 
             # Main Story - Asks Traveller Name
             main_story()
+            traveller_name = input("What shall I call you?\n")
+            print(f"\nIt is a bit hard for me to say this, but I will call you {traveller_name}!")
+            print(f"Then the alien creature points ahead of you and says, '{traveller_name}, we need to go that way.'")
 
             # Loops Story A, Story B and Story C
             challenge_one = input("\nExcept you hear something coming....\nAhead of you is a door, a loose panel, or do you make a run for it?\nWhat do you do? Type: (door) / (hide) or (run)\n").lower().strip()
             clearing.clear()
+
+            # first decision
             if challenge_one == "run":
                 print("You take off running!\nYou turn the corner pressing yourself against the metal walls listening carefully for any noise.\n")
+
+                # Story C / 2nd Decision
                 challenge_two = input("But then you see a small fluffy creature with big eyes.\nDo you pick it up? Type: (Yes) / (No)\n").lower().strip()
                 if challenge_two == "no" or challenge_two == "n":
                     print("\nNow way! Your alien friend smiles at you wisely.")
                     print(f"Saying, '{traveller_name}, a wise decision, they can bite your hand off!'.")
                     print("Before we can go we need to get past the creature, says the alien.")
+
+                    # Story C / 3rd Decicion
                     challenge_three = input("Should we feed it?' Type: (Yes) / (No)\n").lower().strip()
                     if challenge_three == "yes" or challenge_three == "y":
                         print("\nGood thinking, lets feed it from one of those containers.")
+
+                        # Story C / First Test
                         random_bottle = int(input("Which container do you feed it? The one labelled 0 or 1? Enter a number (0) or (1):\n"))
                         random_bottle = random.randint(0, 1)
                         if random_bottle == 0:
@@ -46,29 +58,24 @@ def main():
                             print("'I am unable to touch these containers and needed help your to feed Nog!")
                             print("Next thing you remember is waking up in your own bed. Was that all a dream?")
                             print("THE END")
-                            restart=input("Do you want to play again? Type: (Yes) / (No)\n").lower().strip()
-                            clearing.clear()
-                            if restart == "yes" or restart == "y":
-                                main()
-                            else: 
-                                print("Maybe next time.")
-                                exit()
-                            break
+
+                            # Restart function 
+                            restart_game()
+                            
                         else:
                             print("Oh no... I don't think that was the right one.")
-                            print("The last thing you see is the fluffy creature lunging for your face!\nYou DEAD.")
-                            restart=input("Do you want to play again? Type: (Yes) / (No)\n").lower().strip()
-                            clearing.clear()
-                            if restart == "yes" or restart == "y":
-                                main()
-                            else: 
-                                print("Maybe next time.")
-                                exit()
-                            break
+                            print("The last thing you see is the fluffy creature lunging for your face!")
+                            you_died()
+                            
+                            # Restart function
+                            restart_game()
+                           
                     elif challenge_three == "no":
-                        print("That was a bad mistake! As you try to leave the fluffy creature lunges for your face. The last thing you remember is the immeense pain.\nYou DEAD.")
+                        print("That was a bad mistake! As you try to leave the fluffy creature lunges for your face. The last thing you remember is the immeense pain.\n")
+                        you_died()
                     else:
-                        print("What just happened?\nYou DEAD.")    
+                        print("What just happened?\n")    
+                        you_died()
                         restart=input("Do you want to play again? Type: (Yes) / (No)\n").lower().strip()
                         clearing.clear()
                         if restart == "yes" or restart == "y":
@@ -78,23 +85,23 @@ def main():
                             exit()
                         break
                 elif challenge_two == "yes" or challenge_two == "y":
-                    print("\nAww how cute you think to yourself.\nYou reach out with your hand and see a giant mouth open wide with razor sharp teeth!\nIn an instance your arm is bitten off and you pass out from blood loss.\nYou DEAD!")
+                    print("\nAww how cute you think to yourself.\nYou reach out with your hand and see a giant mouth open wide with razor sharp teeth!\nIn an instance your arm is bitten off and you pass out from blood loss.\n")
+                    you_died()
                 else:
-                    print("What just happened?\nYou DEAD.")
-                    restart=input("Do you want to play again? Type: (Yes) / (No)\n").lower().strip()
-                    clearing.clear()
-                    if restart == "yes" or restart == "y":
-                        main()
-                    else: 
-                        print("Maybe next time.")
-                        exit()
-                    break
+                    print("What just happened?\n")
+                    you_died()
+                    
+                    # Restart function
+                    restart_game()
+
             elif challenge_one == "hide":
                 print("You sqeeze into the tight space, quickly covering the panel back into place.\nNext minute you hear a thump on the panel as it opens to reveal the alien creature looking at you.")
                 challenge_four = input(f"'It's safe {traveller_name}'. Do you leave your hiding spot? Type: (Yes) / (No)\n").lower().strip()
                 if challenge_four == "yes" or challenge_four == "y":
                     print("\nFollow me, I found somehing I want to show you.")
                     print("\n\nThe alien creature shows you a small metallic box, with etchings and a keypad on it.\nWhat do you think the password could be?")
+                   
+                    # Turn this into a function                   
                     correct_password = False
                     password = "space"
                     i = 0
@@ -112,36 +119,27 @@ def main():
                         print("A blinding flash of light errupts and you pass out. Only to wake up in your backyard under a sky full of stars.")
                         print("THE END")
                     else:
-                        print("The box starts to shake in your hands and a loud noise errupts from it.\nYou DEAD.")
+                        print("The box starts to shake in your hands and a loud noise errupts from it.\n")
+                        you_died()
                     print("That is the end of your Space Adventure.")
-                    restart=input("Do you want to play again? Type: (Yes) / (No)\n").lower().strip()
-                    clearing.clear()
-                    if restart == "yes" or restart == "y":
-                        main()
-                    else: 
-                        print("Maybe next time.")
-                        exit()
+                    
+                    # Restart function
+                    restart_game()
+
                 elif challenge_four == "no" or challenge_four == "n":
                     print("\nYou look back at the alien creature and shake your head!\nThe alien creature looks sad but puts the panel back.")
                     print("As the panel is locked into place you realise there is no air in this tight space.\nYou pass out from lack of oxygen.\nYou DEAD.")
-                    restart=input("Do you want to play again? Type: (Yes) / (No)\n").lower().strip()
-                    clearing.clear()
-                    if restart == "yes" or restart == "y":
-                        main()
-                    else: 
-                        print("Maybe next time.")
-                        exit()
-                    break
+                    
+                    # Restart function
+                    restart_game()
+
                 else: 
-                    print("You start shaking uncontrollably. What is going on you think as your body heats up to a burning fury!\nYou DEAD.")
-                    restart=input("Do you want to play again? Type: (Yes) / (No)\n").lower().strip()
-                    clearing.clear()
-                    if restart == "yes" or restart == "y":
-                        main()
-                    else: 
-                        print("Maybe next time.")
-                        exit()
-                    break
+                    print("You start shaking uncontrollably. What is going on you think as your body heats up to a burning fury!\n")
+                    you_died()
+
+                    # Restart function
+                    restart_game()
+                    
             else:
                 print("You push the door to reveal a room full of poisionous plants!\nYou accidentally brushed against one in your haste and start to feel sick.\nOn no... you start to swell up!\n")
                 print("Looking around you, you see three bottles of gooey liquid. One of them must be the antidote!\n")
@@ -149,7 +147,9 @@ def main():
                 print(f"You quickly grab the bottle with the label, {guess} on it and drink it!")
                 print("On no... you don't feel so good...")
                 print(f"Last thing you hear is, {traveller_name}, that wasn't antidote!")
-                print("You DEAD.")
+                you_died()
+
+                # Restart function
                 restart_game()
         else: 
             print('Maybe next time.')
