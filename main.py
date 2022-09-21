@@ -10,6 +10,8 @@ from main_story import main_story
 from ending import you_died
 from ending import restart_game
 from ending import finished_story
+from pyfiglet import Figlet
+from ascii import ascii_title
 
 def main():
 
@@ -24,6 +26,7 @@ def main():
             clearing.clear()
 
             # Main Story - Asks Traveller Name
+            ascii_title()
             main_story()
             traveller_name = input("What shall I call you?\n")
             print(f"\nIt is a bit hard for me to say this, but I will call you {traveller_name}!")

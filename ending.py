@@ -1,13 +1,17 @@
-# You died function AND Restart
+# Ending functions
+
+import clearing
 
 def you_died():
     print("You Died!")
     print("That is the end of your Space Adventure.")
+    clearing.clear()
 
 
 def finished_story():
     print("THE END")
     print("That is the end of your Space Adventure.")
+    clearing.clear()
 
 
 def restart_game():
