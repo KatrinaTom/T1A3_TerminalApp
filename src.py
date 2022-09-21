@@ -10,11 +10,3 @@ def number_guess(prompt):
             print("This one looks weird, try a different bottle with a number?\n\n")
     return result
 
-# def restart_game(restart):
-#     if restart == "yes" or restart == "y":
-#         main()
-#     else: 
-#         exit()
-
-
-# restart=input("Do you want to play again? Type: (Yes) / (No)\n").lower().strip()

@@ -111,22 +111,32 @@ def main():
                 if challenge_four == "yes" or challenge_four == "y":
                     print("\nFollow me, I found somehing I want to show you.")
                     print("\n\nThe alien creature shows you a small metallic box, with etchings and a keypad on it.\nWhat do you think the password could be?")
-                    def check_password():
-                        password = "space"
-                        while input("You see the first letter as an 'S' and the last letter as a 'E'. Enter your guess to see if it works:\n").lower().strip() != password:
-                            print("\n\nYou hear a loud noise with a mechanical voice repeating, 'Error, Error, Error'\nYou try again.\n")
+                    correct_password = False
+                    password = "space"
+                    i = 0
+                    while correct_password == False and i < 3:
+                        attempted_password = input("You see the first letter as an 'S' and the last letter as a 'E'. Enter your guess to see if it works:\n").lower().strip()
+                        if attempted_password == password:
+                            print("It worked!")
+                            correct_password = True
+                        else:
+                            i += 1 
+                            print(f"\nYou hear a loud noise with a mechanical voice repeating, 'Error, Error, Error'\nTry Again! {3 - i} Attempts left.\n")
+                    if correct_password == True:
                         print("\nYou hear a click and a whir of noises as the box opens to display a minuture galaxy.")
                         print(f"'{traveller_name}, you found it! I was looking for my home world and here it is. You SAVED my World!")
                         print("A blinding flash of light errupts and you pass out. Only to wake up in your backyard under a sky full of stars.")
                         print("THE END")
-                        restart=input("Do you want to play again? Type: (Yes) / (No)\n").lower().strip()
-                        clearing.clear()
-                        if restart == "yes" or restart == "y":
-                            main()
-                        else: 
-                            print("Maybe next time.")
-                            exit()
-                    check_password()
+                    else:
+                        print("The box starts to shake in your hands and a loud noise errupts from it.\nYou DEAD.")
+                    print("That is the end of your Space Adventure.")
+                    restart=input("Do you want to play again? Type: (Yes) / (No)\n").lower().strip()
+                    clearing.clear()
+                    if restart == "yes" or restart == "y":
+                        main()
+                    else: 
+                        print("Maybe next time.")
+                        exit()
                 elif challenge_four == "no" or challenge_four == "n":
                     print("\nYou look back at the alien creature and shake your head!\nThe alien creature looks sad but puts the panel back.")
                     print("As the panel is locked into place you realise there is no air in this tight space.\nYou pass out from lack of oxygen.\nYou DEAD.")
@@ -164,11 +174,9 @@ def main():
                     print("Maybe next time.")
                     exit()
                 break
-
         else: 
             print('Maybe next time.')
             break
-
 main()
 
 
