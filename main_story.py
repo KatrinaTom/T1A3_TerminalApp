@@ -1,5 +1,4 @@
-# Main Story AND capture Traveller Name
-
+# Main Story
 def main_story():
     print("Welcome Space Traveller")
     print("I have brought you here as we are in grave danger and I need your help!")

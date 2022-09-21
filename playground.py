@@ -19,7 +19,6 @@ if correct_password == True:
     print("THE END")
 else:
     print("The box starts to shake in your hands and a loud noise errupts from it.\nYou DEAD.")
-print("That is the end of your Space Adventure.")
 
 
 
