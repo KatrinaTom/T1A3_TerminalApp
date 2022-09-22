@@ -53,14 +53,14 @@ This is a choose your own adventure story. A mysterious creature has transported
 To help the mysterious creature you will be asked to make decisions and input your responses on your journey. 
 Along the way you may encounter some challenges and puzzles to test your skills and knowledge! 
 
-![Heading into Orbital Sunrise](images/headingIntoOrbitNasa.jpeg)
+![Heading into Orbital Sunrise](docs/images/headingIntoOrbitNasa.jpeg)
 
 ___________________________________________________________________
 
 ## Agile Process<a name="agile"></a>
 The below is a documentation of the Software Development Cycle for the Terminal Application. Aim of this is to design, implement and test a terminal application. The outcome is to demonstrate that I am able to use a range of developer tools, while also making use of real life software development life cycle processes, such as agile development. 
 
-![Software Development Life Cycle](images/sdlc.png)
+![Software Development Life Cycle](docs/images/sdlc.png)
 
 
 ## Analysis<a name="analysis"></a>
@@ -72,7 +72,7 @@ As the product owner, stakeholder, developer and tester for the Terminal Applica
 Through the use of tools such as miro, I can use a virtual whiteboard to help me visualize my ideas and expand on them. 
 [Miro White Board Terminal App](https://miro.com/app/board/uXjVPX0yzdY=/)
 
-![Miro White Board Requirement Gathering](images/miro_requirements.png)
+![Miro White Board Requirement Gathering](docs/images/miro_requirements.png)
 
 2.  **Brainstorm an idea that fits the requirements**
    
@@ -89,7 +89,7 @@ Through the use of tools such as miro, I can use a virtual whiteboard to help me
 
 I expanded on the basic foundations on what I would like to achieve with my Terminal Application. Even though this isn’t a business strategy, I found it still helpful to focus on what and why I want to achieve and who my end user is. 
 
-![Opportunity Canvas](images/opportunity_canvas.png)
+![Opportunity Canvas](docs/images/opportunity_canvas.png)
 
 **Analysis Results:**
 * Easy to read / follow along story
@@ -109,8 +109,8 @@ Next is to design the Terminal Application now that I understand who my end user
 * Challenges (What are they and how many) 
 * Identifying the Story line - The Theme (It's Space)
 
-![Flow Chart Version 2](images/flowchart_v2.png)
-![Flow Chart Key](images/flowchart_key.png)
+![Flow Chart Version 2](docs/images/flowchart_v2.png)
+![Flow Chart Key](docs/images/flowchart_key.png)
 
 
 ## Features<a name="features"></a>
@@ -134,7 +134,7 @@ Setting up for success requires a little bit of planning. With the help of Trell
 
 [Trello - Choose Your Own Adventure](https://trello.com/b/KSBbpWHq/choose-your-own-adventure-terminal-app)
 
-![Screenshot of Trello Progress](images/trello.png)
+![Screenshot of Trello Progress](docs/images/trello.png)
 
 **Columns:**
 * High Level Requirements (Epics)
@@ -146,7 +146,7 @@ Setting up for success requires a little bit of planning. With the help of Trell
 
 Example of a Ticket with Acceptance Critieria
 
-![Example of Acceptance Criteria](images/acceptance.png)
+![Example of Acceptance Criteria](docs/images/acceptance.png)
 
 ___________________________________________________________________
 
@@ -164,7 +164,7 @@ Link to Testing Plan:
 
 [Google Documents - Acceptance Testing](https://docs.google.com/spreadsheets/d/11MfBISdv7bes_b3W9-2sHLohp8e025O8-VJ1_nbUH4c/edit#gid=0)
 
-![Screenshot of Testing Plan - Acceptance Testing for Choose Your Own Adventure](images/Testing.png)
+![Screenshot of Testing Plan - Acceptance Testing for Choose Your Own Adventure](docs/images/Testing.png)
 
 Example of a test (Happy Flow and Negative (sad) Flow)
 * This is to handle error handling for positive experience (entering in a string)
@@ -173,7 +173,7 @@ Example of a test (Happy Flow and Negative (sad) Flow)
 
 ! Testing Instructions match the Expected Results, the test is set as PASS.
   
-![Example of Test Case for input field](images/example_test.png)
+![Example of Test Case for input field](docs/images/example_test.png)
 
 
 Steps

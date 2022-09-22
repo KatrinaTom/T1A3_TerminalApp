@@ -1,12 +1,12 @@
 # Choose Your Own Adventure Application 
 
 # Imported Modules
-from src import number_guess
+from functions import guess_number
 import random
 from sys import argv
 import clearing
-from instructions import instructions
-from main_story import main_story
+from story_line import instructions
+from story_line import main_story
 from ending import you_died
 from ending import restart_game
 from ending import finished_story
@@ -18,27 +18,32 @@ def main():
 # Instructions 
     instructions()
 
-    # Are you ready to play game -  Control Flow
-    start_adventure = input("Are you ready for your journey? (Yes/No):\n").lower()
+    # Are you ready to play game -  Control Flow (77 Charaters)
+    start = input("Are you ready for your journey? (Yes) / (No):\n").lower().strip()
 
     while True:
-        if start_adventure == "yes" or start_adventure == "y":
+        if start == "y" or start == "yes":
+            print("Lets Begin!")
             clearing.clear()
 
-            # Main Story - Asks Traveller Name
             ascii_title()
             main_story()
-            traveller_name = input("What shall I call you?\n")
-            print(f"\nIt is a bit hard for me to say this, but I will call you {traveller_name}!")
-            print(f"The alien creature points ahead of you and says, '{traveller_name}, we need to go.'")
 
-            # Loops Story A, Story B and Story C
-            challenge_one = input("\nExcept you hear something coming....\nAhead of you is a door, a loose panel, or do you make a run for it?\nWhat do you do? Type: (door) / (hide) or (run)\n").lower().strip()
+            # Ask for Traveller name - Be in the story
+            traveller_name = input("What shall I call you?\n").strip()
+            print(f"\nIt is hard to say, but I will call you {traveller_name}!")
+            print(f"The alien creature points and says, '{traveller_name}, we must go.'")
+            print("Except you hear something coming....\n")
+
+            # Decision One (door) / (hide) / (run) 
+            print("Ahead is a door, a loose panel, or do you run?")
+            dec_one = input("What do you do? Type: (door) / (hide) or (run)\n").lower().strip()
             clearing.clear()
 
             # first decision
-            if challenge_one == "run":
-                print("You take off running!\nYou turn the corner pressing yourself against the metal walls listening carefully for any noise.\n")
+            if dec_one == "run":
+                print("\nYou take off running!")
+                print("Turning a corner you press yourself against a metal wall.")
 
                 # Story C / 2nd Decision
                 challenge_two = input("But then you see a small fluffy creature with big eyes.\nDo you pick it up? Type: (Yes) / (No)\n").lower().strip()
@@ -106,9 +111,12 @@ def main():
                     restart_game()
 
             # Story B / Decision 1
+            elif dec_one == "hide":
+                print("\nYou sqeeze into the dark hole.")
+                print("Covering the panel back into place...")
+                print("After a few heartbeats, the alien creature opens the panel.")  
 
-            elif challenge_one == "hide":
-                print("You sqeeze into the tight space, quickly covering the panel back into place.\nNext minute you hear a thump on the panel as it opens to reveal the alien creature looking at you.")
+                # Decision
                 challenge_four = input(f"'It's safe {traveller_name}'. Do you leave your hiding spot? Type: (Yes) / (No)\n").lower().strip()
                 if challenge_four == "yes" or challenge_four == "y":
                     print("\nFollow me, I found somehing I want to show you.")
@@ -154,24 +162,40 @@ def main():
 
                     # Restart function
                     restart_game()
-                    
-            else:
-                print("You push the door to reveal a room full of poisionous plants!\nYou accidentally brushed against one in your haste and start to feel sick.\nOn no... you start to swell up!\n")
-                print("Looking around you, you see three bottles of gooey liquid. One of them must be the antidote!\n")
-                guess = number_guess("Quick!, which bottle do you choose? Guess ANY number or letter: \n")
-                print(f"\nYou quickly grab the bottle with the label, {guess} on it and drink it!")
-                print("On no... you don't feel so good...")
+
+            elif dec_one == "door":
+                print("\nYou push the door to reveal a room full of poisionous plants!")
+                print("You accidentally brushed against one and start to feel sick.")
+                print("You see bottles of gooey liquid, one must be antidote!\n")        
+            
+                # Challenge 1, guess the bottle of antidote
+                guess_number()
                 print(f"Last thing you hear is, {traveller_name}, that wasn't antidote!")
+                
+                # End of Story - you died.
                 you_died()
 
                 # Restart function 
                 restart_game()
 
-        else: 
-            print('Maybe next time.')
+            else:
+                print("Something went wrong. You black out!")
+
+                # Restart function 
+                restart_game()
+
+        elif start == "no" or start == "n":
+            print("Thats too bad, maybe next time")
             break
+        else:
+            print("Are you sure you entered the right phrase?")   
+            
+            # Restart function 
+            restart_game()
 
 # Where the code starts
+            
+     
 main()
 
 
