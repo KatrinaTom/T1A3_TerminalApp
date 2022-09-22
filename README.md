@@ -283,7 +283,7 @@ The challenges/tests could be tested with Validation Error handling and pytest.
 
 # Deployment<a name="deployment"></a>
 
-Deplayment to GitHub [GitHub](https://github.com/KatrinaTom/T1A3_TerminalApp)
+Deployment to GitHub [GitHub](https://github.com/KatrinaTom/T1A3_TerminalApp)
 
 Source Folder
 -README.md
@@ -337,12 +337,15 @@ ________________________________________________________________________________
 # User Interface and Experience<a name="interface"></a>
 
 Instructions for the game
+
 ![Instructions](docs/images/game_images/instructions.png)
 
 Welcome message from the alien
+
 ![Welcome message](docs/images/game_images/welcome.png)
 
 Story A - You choose to run! With the Ending 
+
 ![Story A - Ending](docs/images/game_images/story_a_ending.png)
 
 __________________________________________________________________________________

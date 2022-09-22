@@ -1,4 +1,3 @@
-
 # Ending functions
 
 # Function when the traveller dies in the story

@@ -11,7 +11,7 @@ def instructions():
     print("Along the way an alien creature will ask you questions.")
     print("You may even encounter some challenging puzzles to test your skills!\n")
 
-
+# Function Welcome message from alien
 def main_story():
     print("Welcome Space Traveller!")
     print("I have brought you here as we are in grave danger.")
