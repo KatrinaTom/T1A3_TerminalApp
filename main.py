@@ -72,15 +72,6 @@ def main():
 
                         # Restart game 
                         restart_game()
-
-                            
-                        # else:
-                        #     print("Oh no... I don't think that was the right one.")
-                        #     print("The last thing you see is the fluffy creature lunging for you!")
-                        #     you_died()
-                            
-                        #     # restart_game()
-                        #     restart_game()
                            
                     elif dec_three == "no":
                         print("\nThat was a bad mistake!")
@@ -133,11 +124,8 @@ def main():
                    
                     # Story B / Challenge, guess the password                    
                     password_guess()
-                    print(f"'{traveller_name}, you found it! It is my home world.'")
-                    print("You SAVED my World!")
-                    print("A blinding flash of light errupts and you pass out.")
-                    print("Only to wake up in your backyard under a sky full of stars.")
 
+                    # Finished story
                     finished_story()
                     
                     # Restart game
@@ -192,9 +180,7 @@ def main():
             # Restart function 
             restart_game()
 
-# Where the code starts
-            
-     
+# Where the code starts   
 main()
 
 

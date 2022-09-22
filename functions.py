@@ -30,19 +30,20 @@ def random_contaner():
 
 # Function to guess the password for Story B - metalic box
 def password_guess():
+    print("You see the first letter as 'S' and the last letter as 'E'")
     count = 0
     while count < 3:
         password_guess = input("\nEnter your guess to see if it works:\n").lower().strip()
         if password_guess == "space":
-            print("It worked!")
-        elif password_guess != "space":
-            count += 1
-            print(f"\nYou hear 'Error, self destruct in, {3 - count}.")
-            print("You see the first letter as 'S' and the last letter as 'E'")
-            print("Try again")
+            print("\nIt worked!")
+            print("You saved my world!")
+            print("A blinding flash of light errupts and you pass out.")
+            print("Only to wake up in your backyard under a sky full of stars.")
+            break
         else:
-            print("The box starts to shake in your hands and a loud noise errupts from it")
-            you_died()
-            restart_game()
-    you_died()
-    restart_game()
+            print(f"\nYou hear 'Error, self destruct in, {3 - count}.")
+            count += 1
+            print("Try again")
+    else:
+        you_died()
+        restart_game()
