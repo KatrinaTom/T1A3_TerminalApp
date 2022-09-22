@@ -1,7 +1,7 @@
 # Choose Your Own Adventure Application 
 
 # Imported Modules
-from functions import guess_number
+from functions import guess_number, password_guess, random_contaner
 import random
 from sys import argv
 import clearing
@@ -31,6 +31,7 @@ def main():
 
             # Ask for Traveller name - Be in the story
             traveller_name = input("What shall I call you?\n").strip()
+            clearing.clear()
             print(f"\nIt is hard to say, but I will call you {traveller_name}!")
             print(f"The alien creature points and says, '{traveller_name}, we must go.'")
             print("Except you hear something coming....\n")
@@ -43,128 +44,126 @@ def main():
             # first decision
             if dec_one == "run":
                 print("\nYou take off running!")
-                print("Turning a corner you press yourself against a metal wall.")
+                print("Turning a corner you press yourself against a metal wall.\n")
 
-                # Story C / 2nd Decision
-                challenge_two = input("But then you see a small fluffy creature with big eyes.\nDo you pick it up? Type: (Yes) / (No)\n").lower().strip()
-                if challenge_two == "no" or challenge_two == "n":
-                    print("\nNow way! Your alien friend smiles at you wisely.")
-                    print(f"Saying, '{traveller_name}, a wise decision, they can bite your hand off!'.")
-                    print("Before we can go we need to get past the creature, says the alien.")
+                # Story A / 2nd Decision
+                print("You see a small fluffy creature with big eyes.")
+                dec_two = input("Do you pick it up? Type: (Yes) / (No)\n").lower().strip()
+                clearing.clear()
+                if dec_two == "no" or dec_two == "n":
+                    print("\nNo way! Your alien friend smiles at you wisely.")
+                    print(f"'A wise decision {traveller_name}, they can bite your hand off!.'")
 
-                    # Story C / 3rd Decicion
-                    challenge_three = input("Should we feed it?' Type: (Yes) / (No)\n").lower().strip()
-                    if challenge_three == "yes" or challenge_three == "y":
+                    # Story A / 3rd Decicion
+                    print("You still need to get past the creature.")
+                    dec_three = input("Should you feed it?' Type: (Yes) / (No)\n").lower().strip()
+                    if dec_three == "yes" or dec_three == "y":
                         print("\nGood thinking, lets feed it from one of those containers.")
 
-                        # Story C / First Test
-                        random_bottle = int(input("Which container do you feed it? The one labelled 0 or 1? Enter a number (0) or (1):\n"))
-                        random_bottle = random.randint(0, 1)
-                        if random_bottle == 0:
-                            print("\nYou open the container and throw the food at it. Look! Its eating!")
-                            print(f"Your alien friend looks at you and then says, '{traveller_name}, THANK YOU!'")
-                            print("The alien friend picks up the fluffy creature and says,")
-                            print("'I am unable to touch these containers and needed help your to feed Nog!")
-                            print("Next thing you remember is waking up in your own bed. Was that all a dream?")
-                            finished_story()
-                            restart_game()
+                        # Story A / First Challenge
+                        random_contaner()
+                        print("\nThe alien friend picks up the fluffy creature and says,")
+                        print("'I am unable to touch these containers.'")
+                        print("'I needed help your to feed my pet!'\n")
+                        print("Next thing you remember is waking up in your own bed. Was that all a dream?")
+                        
+                        # Finished Story A
+                        finished_story()
 
-                            # restart_game()
-                            restart_game()
+                        # Restart game 
+                        restart_game()
+
                             
-                        else:
-                            print("Oh no... I don't think that was the right one.")
-                            print("The last thing you see is the fluffy creature lunging for your face!")
-                            you_died()
+                        # else:
+                        #     print("Oh no... I don't think that was the right one.")
+                        #     print("The last thing you see is the fluffy creature lunging for you!")
+                        #     you_died()
                             
-                            # restart_game()
-                            restart_game()
+                        #     # restart_game()
+                        #     restart_game()
                            
-                    elif challenge_three == "no":
-                        print("That was a bad mistake! As you try to leave the fluffy creature lunges for your face. The last thing you remember is the immeense pain.\n")
+                    elif dec_three == "no":
+                        print("\nThat was a bad mistake!")
+                        print("You try to get past the creature, except it lunges at you!")
+                        print("The last thing you remember is the immeense pain.")
                         you_died()
 
-                        # restart game
+                        # Restart game
                         restart_game()
 
                     else:
                         print("What just happened?\n")    
                         you_died()
                         
-                        # restart game
+                        # Restart game
                         restart_game()
 
-                elif challenge_two == "yes" or challenge_two == "y":
+                elif dec_two == "yes" or dec_two == "y":
                     print("\nAww how cute you think to yourself.")
-                    print("You reach out with your hand and see a giant mouth open wide with razor sharp teeth!")
-                    print("In an instance your arm is bitten off and you pass out from blood loss.\n")
+                    print("You reach out with your hand.")
+                    print("and see a giant mouth open wide with razor sharp teeth!")
+                    print("Your arm is bitten off and you pass out from blood loss.\n")
                     you_died()
 
-                    # restart game
+                    # Restart game
                     restart_game()
 
                 else:
                     print("What just happened?\n")
                     you_died()
                     
-                    # Restart function
+                    # Restart game
                     restart_game()
 
             # Story B / Decision 1
             elif dec_one == "hide":
                 print("\nYou sqeeze into the dark hole.")
                 print("Covering the panel back into place...")
-                print("After a few heartbeats, the alien creature opens the panel.")  
+                print("After awhile, the alien creature opens the panel.\n")  
 
-                # Decision
-                challenge_four = input(f"'It's safe {traveller_name}'. Do you leave your hiding spot? Type: (Yes) / (No)\n").lower().strip()
-                if challenge_four == "yes" or challenge_four == "y":
-                    print("\nFollow me, I found somehing I want to show you.")
-                    print("\n\nThe alien creature shows you a small metallic box, with etchings and a keypad on it.\nWhat do you think the password could be?")
+                # Story A - Decision
+                print(f"'It's safe {traveller_name}.'")
+                dec_four = input("Do you leave your hiding spot? Type: (Yes) / (No)\n").lower().strip()
+                clearing.clear()
+                if dec_four == "yes" or dec_four == "y":
+                    print("Follow me, I found something I want to show you.")
+                    print("\nThe alien creature shows you a small metallic box.")
+                    print("It has familar etchings on it and a keypad.")
+                    print("What do you think the password could be?")
                    
-                    # Story B / Test                    
-                    # Turn this into a function                   
-                    correct_password = False
-                    password = "space"
-                    i = 0
-                    while correct_password == False and i < 3:
-                        attempted_password = input("You see the first letter as an 'S' and the last letter as a 'E'. Enter your guess to see if it works:\n").lower().strip()
-                        if attempted_password == password:
-                            print("It worked!")
-                            correct_password = True
-                        else:
-                            i += 1 
-                            print(f"\nYou hear a loud noise with a mechanical voice repeating, 'Error, Error, Error'\nTry Again! {3 - i} Attempts left.\n")
-                    if correct_password == True:
-                        print("\nYou hear a click and a whir of noises as the box opens to display a minuture galaxy.")
-                        print(f"'{traveller_name}, you found it! I was looking for my home world and here it is. You SAVED my World!")
-                        print("A blinding flash of light errupts and you pass out. Only to wake up in your backyard under a sky full of stars.")
-                        finished_story()
-                        restart_game()
-                    else:
-                        print("The box starts to shake in your hands and a loud noise errupts from it.\n")
-                        you_died()
+                    # Story B / Challenge, guess the password                    
+                    password_guess()
+                    print(f"'{traveller_name}, you found it! It is my home world.'")
+                    print("You SAVED my World!")
+                    print("A blinding flash of light errupts and you pass out.")
+                    print("Only to wake up in your backyard under a sky full of stars.")
+
+                    finished_story()
                     
-                    # Restart function
+                    # Restart game
                     restart_game()
 
-                elif challenge_four == "no" or challenge_four == "n":
-                    print("\nYou look back at the alien creature and shake your head!\nThe alien creature looks sad but puts the panel back.")
-                    print("As the panel is locked into place you realise there is no air in this tight space.\nYou pass out from lack of oxygen.")
+                elif dec_four == "no" or dec_four == "n":
+                    print("\nYou look back at the alien creature and shake your head!")
+                    print("The alien creature looks sad but puts the panel back.")
+                    print("As the panel is locked into place.")
+                    print("You realise there is no air in this tight space.")
+                    print("You pass out from lack of oxygen.")
                     you_died()
                     
-                    # Restart function
+                    # Restart game
                     restart_game()
 
                 else: 
-                    print("You start shaking uncontrollably. What is going on you think as your body heats up to a burning fury!\n")
+                    print("You start shaking uncontrollably.")
+                    print("Your body heats up to a burning fury!")
                     you_died()
 
-                    # Restart function
+                    # Restart game
                     restart_game()
 
             elif dec_one == "door":
-                print("\nYou push the door to reveal a room full of poisionous plants!")
+                print("\nYou push the door to reveal a room full of poisonous plants!")
                 print("You accidentally brushed against one and start to feel sick.")
                 print("You see bottles of gooey liquid, one must be antidote!\n")        
             
@@ -185,7 +184,7 @@ def main():
                 restart_game()
 
         elif start == "no" or start == "n":
-            print("Thats too bad, maybe next time")
+            print("Thats too bad, maybe next time.")
             break
         else:
             print("Are you sure you entered the right phrase?")   
