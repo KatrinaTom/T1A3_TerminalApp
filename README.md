@@ -97,7 +97,7 @@ I expanded on the basic foundations on what I would like to achieve with my Term
 * Easy to understand inputs and enter in details
 * Easy/ Medium/ Hard Challenges 
 * Entertaining story line 
-* Keeping in line with the an Adventure - it will have a series of challenges 
+* Keeping in line with the Adventure - it will have a series of challenges 
 
 End User being someone that enjoys a simple game, and can use a computer with ease. 
 
@@ -142,9 +142,9 @@ Enter your name and see yourself amongst the story line. The mysterious creature
    
 Every decision you face will determine your outcome. Choose a different path each time to find a new story line. 
 
-![Story A](docs/images/game_images/story_a.png)
+![Story A](docs/images/game_images/story_a_ending.png)
 
-3. Feature 3: Test your skills with challenges
+1. Feature 3: Test your skills with challenges
 
 Each story you will need your wits and skills, or was that blind luck to solve the puzzles. Keeping the adventure interesting with fun interactive challenges. 
 
