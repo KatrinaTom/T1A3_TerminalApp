@@ -3,7 +3,7 @@
 Theme: Space Narrative - Choose Your Own Adventure
 
 1. [GitHub Link](https://github.com/KatrinaTom/T1A3_TerminalApp/tree/master)
-2. Add in Presentation Link Here
+2. Add in Presentation Link Here (Video)
 
 ___________________________________________________________________
 
@@ -13,7 +13,7 @@ ___________________________________________________________________
 - [High Level Requirements](#high_level)
 - [Introduction](#introduction)
 
-Software Development Plan
+Software Development and Implementation Plan
 1. [Agile Process](#agile)
 2. [Analysis](#analysis)
 3. [Design](#design)
@@ -21,11 +21,12 @@ Software Development Plan
 4. [Features](#features)
 5. [Set Up](#setup) 
 6. [Development](#development)
+   * Included User Story Mapping
 7. [Testing](#testing)
-8. Deployment
-9.  User Interface and Experience
-10. Implementation Plan
-11. [Install Instructions](#install)
+8. [Deployment](#deployment)
+9.  [User Interface and Experience](#interface)
+10. [Install Instructions](#install)
+11. [Powerpoint presentaion](#powerpoint)
 
 * [Important Links](#links)
 * [Reference List](#references)
@@ -82,7 +83,7 @@ Through the use of tools such as miro, I can use a virtual whiteboard to help me
 * Use Control Flow
 * Create Variables
 * Create Functions 
-* Make use of Loops for challenges 
+* Make use of control flow for challenges 
 * Expand my experience with importing modules and packages to help in achieving some of these challenges. 
 
 3. **Opportunity Canvas**
@@ -98,6 +99,8 @@ I expanded on the basic foundations on what I would like to achieve with my Term
 * Entertaining story line 
 * Keeping in line with the an Adventure - it will have a series of challenges 
 
+End User being someone that enjoys a simple game, and can use a computer with ease. 
+
 __________________________________________________________________
 
 ## Design<a name="design"></a>
@@ -109,23 +112,43 @@ Next is to design the Terminal Application now that I understand who my end user
 * Challenges (What are they and how many) 
 * Identifying the Story line - The Theme (It's Space)
 
+
+Below is my First Attempt at a Flow Chart before I started Developing. 
 ![Flow Chart Version 2](docs/images/flowchart_v2.png)
 ![Flow Chart Key](docs/images/flowchart_key.png)
+
+FINAL Flowchat - Version 3
+
+![Flow Chat Version 3](docs/images/flowchart_v3.png)
+
+**Note**
+
+Using agile methology, the development process included continual testing and enhancement of features. Including updating the story line decisions to capture the best outcome for the end user. Only a slight change to the flow chart.
+
+This included adding additional notes to the flow chart for reference.
+
+__________________________________________________________________________________
 
 
 ## Features<a name="features"></a>
 
-1. Feature 1: Be part of the story
+1. Feature 1: Be part of the story, see your name. 
 
 Enter your name and see yourself amongst the story line. The mysterious creature interacting with you along your journey as you help to save the world! 
 
-2. Feature 2: Different Story Lines
+![Traveller_Name](docs/images/traveller_name.png)
+
+2. Feature 2: Different Story Lines (Story A, Story B and Story C).
    
 Every decision you face will determine your outcome. Choose a different path each time to find a new story line. 
 
+![Story A](docs/images/game_images/story_a.png)
+
 3. Feature 3: Test your skills with challenges
 
-In this story you will need your wits and skills, or was that blind luck to solve the puzzles. Keeping the adventure interesting with fun interactive challenges. 
+Each story you will need your wits and skills, or was that blind luck to solve the puzzles. Keeping the adventure interesting with fun interactive challenges. 
+
+![Story A - Challenge](docs/images/game_images/story_a_container.png)
 
 ___________________________________________________________________
 
@@ -139,22 +162,89 @@ Setting up for success requires a little bit of planning. With the help of Trell
 **Columns:**
 * High Level Requirements (Epics)
 * Backlog (All Tickets to work off)
-* Blocked - Sometimes you need a Hard Basket to come back to or are waiting on something before it can be closed. 
+* Blocked - Sometimes you need a Hard Basket to come back to or are waiting on something before it can be closed. (I also didn't use this at all. I either left it in the backlog or tackled it as my first task of the day)
 * In Progress - A few tickets at the same time, but not taking on too many
-* Review - This will come in handy for code, when I go back and refactor
+* Review - This will come in handy for code, when I go back and refactor (I found that I didn't use this column, the ticket stayed in progress till I could review/refactor the code.)
 * Done - Best column of all. This is where all the acceptance criteria has been met or definition of done is completed
 
+
+Below image of "In Progress" of Trello Board
+
+![Trello - Progress](docs/images/trello_progress.png)
+
+**Checklist Code Requirements** 
+- (Y) R11 - Implement Features (variables, conditional control structures, functions, simple error handling, input and output, importing Python packages, using Python packages)
+- (Y) R12 - DRY (Applied where I could find repeating code. Turned them into functions). Excellent way to keep everything neat/ tidy and easier to update. 
+- (Y) R13 - Apply all styles and conventions. (I applied PEP 8 Style Guide as much as I could. Reviewing print lines to only have 72 Characers. Followed indendation. This is a skill I would need to practice)
+- (Y) R14 - Create an application which runs without error and consistent with development plan. (The Story line works, the feastures and challenges work as per the original plan. Alot of manual testing was involved to get the functionality correct, refactor and then design wise improve the experience for the user.)
+- (Y) R15 - Design Two tests which check that the application is running as expected. (This is outlined in the Testing Plan. These tests where manual as majority of the error handling consistent of if/elif/else statements to catch the negative paths)
+- (Y) R16 - Utlise source control. (SAVE, SAVE, SAVE! This also came in handy when refactoring and referencing back what I changed so I could fix it.)
+- (Y) R17 - Utlise developer tools to faciliate the execution of the application (Bash script, as basic as it is, this was used to help the end user run the application.)
+
+## Acceptance Criteria 
 Example of a Ticket with Acceptance Critieria
 
 ![Example of Acceptance Criteria](docs/images/acceptance.png)
+
+Example of a Ticket with Acceptance Criteria for manual End to End Testing of a Positive (Happy Path) for Story C. 
+
+![Story C Acceptance Criteria](docs/images/story_c_testing.png)
 
 ___________________________________________________________________
 
 # Development<a name="development"></a>
 
+Through the use of miro (a virtual whiteboard), I used a Story Mapping technique to breakout my features and development plan. 
 
+[Miro - Story Mapping](https://miro.com/app/board/uXjVPX0yzdY=/)
 
+![Miro - Story Mapping](docs/images/story_mapping.png)
 
+Reading from left to right, I started with the main tasks I needed to accomplish.
+
+## Development Plan
+
+1. Create High Level Tickets (yellow tickets), that would translate to the Skeleton of my main.py file. 
+
+2. Idenfy the user story (the white tickets)
+Order of User Storys (I didn't write these as user story, more as tasks)
+* Title
+* Instructions
+* Feature 1 - input Traveller Name and Display in Story 
+* Feature 2 - Create three different story lines 
+* Story A + if/else statements (Happy and Sad flows)
+* Story B + if/else statements (Happy and Sad flows)
+* Story C + if/else statements (Happy and Sad flows)
+* Feature 3 - Create Challenges with functions 
+* Story A Challenge (Choose the right container of food)
+* Story B Challenge (Guessing Game of Metal Box)
+* Story C Challenge (Pick the right container of antidote)
+* Error Validation in Challenges
+* Create functions to restart the game
+
+3. Apply DRY (Don't Repeat Yourself)
+Find repeating code and create these into functions. 
+
+4. Create a restart the game functionality 
+
+5. Refactor the code to be inline with PEP 8 Style guide. 
+* Review all lines of code to match the length
+* Review naming conventions, do they make sense and can anyone understand them
+* Review Code, can I improve on it without breaking it. 
+
+6. Iterative Testing
+* Each feature and User Story was tested progressively
+* Saving/Deployment to Git regularly to save update and to help with testing (In case I broke something)
+  
+7. End to End Testing
+* This required the manual testing plan. Test all scenarios (Happy/ Sad paths)
+* input fields can handle strings and integars
+* If failing, add in error Validation
+* Test on different devices/ operating systems
+
+8. Software Development Tools
+* Create a bash script to run the program
+* Create a virtual environment to import Python packages
 
 ____________________________________________________________________
 
@@ -190,7 +280,29 @@ Another learning experience was making sure the user was not trapped in a loop a
 
 The challenges/tests could be tested with Validation Error handling and pytest.
 
-TOTAL User Acceptance Tests = 
+
+# Deployment<a name="deployment"></a>
+
+Deplayment to GitHub [GitHub](https://github.com/KatrinaTom/T1A3_TerminalApp)
+
+Source Folder
+-README.md
+
+/docs
+- images (as seen in this README.md)
+- images/game_images
+
+/ppt
+- Access to the Powerpoint presentation
+  
+/src
+- .gitignore 
+- ascii.py
+- endings.py
+- functions.py
+- main.py
+- start.sh
+- story_line.py
 
 _______________________________________________________
 
@@ -219,7 +331,25 @@ Type Terminal to open
 
 1. See Welcome message. Have fun on your Space Adenture!
 
+__________________________________________________________________________________
 
+
+# User Interface and Experience<a name="interface"></a>
+
+Instructions for the game
+![Instructions](docs/images/game_images/instructions.png)
+
+Welcome message from the alien
+![Welcome message](docs/images/game_images/welcome.png)
+
+Story A - You choose to run! With the Ending 
+![Story A - Ending](docs/images/game_images/story_a_ending.png)
+
+__________________________________________________________________________________
+
+# Powerpoint Presentation<a name="powerpoint"></a>
+
+Insert images of powerpoint here
 _______________________________________________________
 
 ## Important Links<a name="links"></a>
