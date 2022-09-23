@@ -3,7 +3,7 @@
 Theme: Space Narrative - Choose Your Own Adventure
 
 1. [GitHub Link](https://github.com/KatrinaTom/T1A3_TerminalApp/tree/master)
-2. Add in Presentation Link Here (Video)
+2. [Presentation Link Here](https://vimeo.com/752813199/d2dfec0e8d)
 3. [Powerpoint Presentation Link](docs/images/ppt_title.png)
 4. [Recording of Terminal App - Choose Your Own Adventure](https://vimeo.com/752803413/ff96e9476b)
 
@@ -458,6 +458,8 @@ The following important links are tools used to help with Analysis, Discovery an
 1. [Trello](https://trello.com/b/KSBbpWHq/choose-your-own-adventure-terminal-app) 
 2. [Google Docs - Documentation](https://docs.google.com/document/d/1GACkQYwjTmybJD7bjVqohAr1S3RhtF-iqK6OqnYQ3ZY/edit#)
 3. [Miro Board](https://miro.com/app/board/uXjVPX0yzdY=/)
+4. [Link to Terminal App Demo](docs/images/recordings/TerminalAppDemo_KatrinaTomaszczyk.webm)
+5. [Link to Presentation](docs/images/recordings/TerminalAppPresentation_KatrinaTomaszczyk.webm)
 
 ___________________________________________________________________
 
@@ -475,5 +477,7 @@ ___________________________________________________________________
 * NASA, 2022 [Heading Into (Orbital) Sunrise](https://www.nasa.gov/multimedia/imagegallery/iotd.html), accessed 19 Sep 2022
 * pypi.org, 2022, [argv 0.0.3](https://pypi.org/project/argv/), accessed 20 Sep 2022
 * python,org, 2022, [python.org](https://www.python.org/downloads/), accessed 23 Sep 2022
-* John Serrie, 2002, [Pan Galatic](https://open.spotify.com/track/4dypSibFbWPQVTDSDFlwXQ), accessed 23 Sep 2022. 
+* John Serrie, 2002, [Pan Galatic](https://open.spotify.com/track/4dypSibFbWPQVTDSDFlwXQ), accessed 23 Sep 2022 
+* pypi, 2014, [pyfiglet 0.7](https://pypi.org/project/pyfiglet/0.7/), accessed 21 Sep 2022
+* pypi, 2020, [clearing 1.0.0](https://pypi.org/project/clearing/), accessed 20 Sep 2022
   
