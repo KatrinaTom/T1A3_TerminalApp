@@ -4,6 +4,11 @@ Theme: Space Narrative - Choose Your Own Adventure
 
 1. [GitHub Link](https://github.com/KatrinaTom/T1A3_TerminalApp/tree/master)
 2. Add in Presentation Link Here (Video)
+3. [Powerpoint Presentation Link](docs/images/ppt_title.png)
+4. [Recording of Terminal App - Choose Your Own Adventure](https://vimeo.com/752803413/ff96e9476b)
+
+*Music provided by John Serrie, "Pan Galatic"*
+
 
 ___________________________________________________________________
 
@@ -395,6 +400,9 @@ ________________________________________________________________________________
 
 # User Interface and Experience<a name="interface"></a>
 
+Below are images from the game. To experience the Space Adventure for yourself, 
+enter in your answers and follow the story line. 
+
 Instructions for the game
 
 ![Instructions](docs/images/game_images/instructions.png)
@@ -423,7 +431,11 @@ ________________________________________________________________________________
 
 # Powerpoint Presentation<a name="powerpoint"></a>
 
-Insert images of powerpoint here
+Please find the link to the entire Powerpoint presentation below:
+
+[Powerpoint Presentation](ppt/T1A3_KatrinaTomaszczyk.pdf)
+
+![Powerpoint Presentation Title](docs/images/ppt_title.png)
 _______________________________________________________
 
 ## Important Links<a name="links"></a>
@@ -448,6 +460,7 @@ ___________________________________________________________________
 * Lucidchart, 2022, [What is a Flowchart](https://www.lucidchart.com/pages/what-is-a-flowchart-tutorial#top), accessed 15 Sep 2022
 * Python, 2022, [PEP 8 Style Guide for Python Code](https://peps.python.org/pep-0008/), accessed 16 Sep 2022
 * NASA, 2022 [Heading Into (Orbital) Sunrise](https://www.nasa.gov/multimedia/imagegallery/iotd.html), accessed 19 Sep 2022
-* pypi.org, 2022 [argv 0.0.3](https://pypi.org/project/argv/), accessed 20 Sep 2022
-* python,org, 2022 [python.org](https://www.python.org/downloads/), accessed 23 Sep 2022
+* pypi.org, 2022, [argv 0.0.3](https://pypi.org/project/argv/), accessed 20 Sep 2022
+* python,org, 2022, [python.org](https://www.python.org/downloads/), accessed 23 Sep 2022
+* John Serrie, 2002, [Pan Galatic](https://open.spotify.com/track/4dypSibFbWPQVTDSDFlwXQ), accessed 23 Sep 2022. 
   
