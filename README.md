@@ -254,6 +254,10 @@ Link to Testing Plan:
 
 [Google Documents - Acceptance Testing](https://docs.google.com/spreadsheets/d/11MfBISdv7bes_b3W9-2sHLohp8e025O8-VJ1_nbUH4c/edit#gid=0)
 
+First attempt at writiing End to End User Testing. 
+
+Each test included screenshots. Testing was done through the process of developement. The thought process was to develop with a test in mind. A User Acceptance criteria that could be tested. 
+
 ![Screenshot of Testing Plan - Acceptance Testing for Choose Your Own Adventure](docs/images/Testing.png)
 
 Example of a test (Happy Flow and Negative (sad) Flow)
@@ -266,11 +270,52 @@ Example of a test (Happy Flow and Negative (sad) Flow)
 ![Example of Test Case for input field](docs/images/example_test.png)
 
 
-Steps
+**Steps**
 1. Write up a manual testing plan 
 2. Capture all scenarios and error handling (Happy and Sad paths)
 3. Where error handling is missing, add error handling
 4. Introduce pytest for tests that can be run as a unit test
+
+
+### End to End Testing 
+
+My Terminal App is completed. Time to test each feature and overall application. 
+
+See Google Sheet / Tab - "AT - 22 SEP 22"
+[Google Sheet - Acceptance Tests](https://docs.google.com/spreadsheets/d/11MfBISdv7bes_b3W9-2sHLohp8e025O8-VJ1_nbUH4c/edit#gid=648163021)
+
+High Level Testing
+
+1. Test Feature 1 (Traveller Name): PASS
+   * User can input "traveller_name". Can be in the from of a string or integars (You may be also be a space alien with a strange name). This field will take ANY input. 
+   * Display "traveller_name" throughout the story. 
+   * Negative Test: Does not handle spaces. If the user does not enter in anything, nothing will display. 
+2. Test Feature 2 (Different Stories): PASS
+   * Tested the different stories, A, B, C and decisions. 
+   * Input captures capitals letters and lowered this.
+   * Input captured integars and control flow handled this with else statement.
+   * Negative Tests: Each decision inclused else block to capture rougue inputs. Resulted in the end of the game. 
+3. Test Feature 3 (Challenges): PASS
+   * Test each Challenge and error handling captures input field if/else statements.
+   * Capture valueError
+   * Capture range error
+  
+![Function Test Choose a Container](docs/images/function_test_container.png)
+
+![Function Test Guess the password](docs/images/function_test_guess.png)
+
+### Further Testing Plan - End to End Testing
+
+![Acceptance Tests 1-0](docs/images/AT_1to9.png)
+
+![Acceptance Tests 10-18](docs/images/AT_10to18.png)
+
+![Acceptance Tests 19-28](docs/images/AT_19to28.png)
+
+![Acceptance Tests 29-38](docs/images/AT_29to38.png)
+
+![Acceptance Tests 39-47](docs/images/AT_39to47.png)
+
 
 **Notes**
 
@@ -278,7 +323,7 @@ Overall I found that this to be a manual testing plan with user acceptance tests
 
 Another learning experience was making sure the user was not trapped in a loop and ensuring a ``break`` statement ``While True:``
 
-The challenges/tests could be tested with Validation Error handling and pytest.
+The challenges have additional error handling to capture valueError. 
 
 
 # Deployment<a name="deployment"></a>
