@@ -15,17 +15,38 @@ def guess_number():
 
 
 # Function to pick a random number. Story line A - Random container to feed
-def random_contaner():
-    number = random.randrange(1,10)
-    random_guess = int(input("Pick a container between 1 and 10. Type your number:\n"))
-    while random_guess != number:
-        if random_guess < number:
-            print("That one doesn't look right, pick a higher number")
-            random_guess = int(input("Pick a container between 1 and 10. Type your number:\n"))
-        else:
-            print("Doesn't look right, pick a lower number.")
-            random_guess = int(input("Pick a container between 1 and 10. Type your number:\n"))
-    print("\nYou open the container and throw the food at it. Look! Its eating!")
+# def random_contaner():
+#     number = random.randrange(1,10)
+#     random_guess = int(input("Pick a container between 1 and 10. Type your number:\n"))
+#     while random_guess != number:
+#         if random_guess < number:
+#             print("That one doesn't look right, pick a higher number")
+#             random_guess = int(input("Pick a container between 1 and 10. Type your number:\n"))
+#         else:
+#             print("Doesn't look right, pick a lower number.")
+#             random_guess = int(input("Pick a container between 1 and 10. Type your number:\n"))
+#     print("\nYou open the container and throw the food at it. Look! Its eating!")
+
+def random_contaner():  
+    while True:
+        try:  
+            number = random.randrange(0,11)
+            random_guess = int(input("Pick a container between 1 and 10. Type your number:\n")) 
+            while random_guess != number:
+                if random_guess < number:
+                    print("That one doesn't look right, pick a higher number")
+                    random_guess = int(input("Pick a container between 1 and 10. Type your number:\n"))
+                elif random_guess not in range(0, 11):
+                    print("Try a number between 1 and 10.)")
+                    random_guess = int(input("Pick a container between 1 and 10. Type your number:\n"))
+                else:
+                    print("Doesn't look right, pick a lower number.")
+                    random_guess = int(input("Pick a container between 1 and 10. Type your number:\n"))
+            print("\nYou open the container and throw the food at it. Look! Its eating!")
+            break
+        except ValueError:
+            print("That doesn't look right, try entering a number between 1 and 10.")
+
 
 
 # Function to guess the password for Story B - metalic box

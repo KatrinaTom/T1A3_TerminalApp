@@ -64,7 +64,7 @@ def main():
                         random_contaner()
                         print("\nThe alien friend picks up the fluffy creature and says,")
                         print("'I am unable to touch these containers.'")
-                        print("'I needed help your to feed my pet!'\n")
+                        print("'I needed your help to feed my pet!'\n")
                         print("Next thing you remember is waking up in your own bed. Was that all a dream?")
                         
                         # Finished Story A
