@@ -370,11 +370,25 @@ Type Terminal to open
 
 ```cd T1A3```
 
+4. Make sure you are in the folder src
+
+```cd src```
+
 4. Copy, paste the following command into Terminal
 
 ```./start.sh```
 
 1. See Welcome message. Have fun on your Space Adenture!
+
+
+
+**Helpful Hints**
+
+Make sure you have the latest Python packages installed. 
+
+You will need python3 to run this. For the lastest documentation please follow the Python.org link.
+
+[Python.org](https://www.python.org/downloads/)
 
 __________________________________________________________________________________
 
@@ -392,6 +406,18 @@ Welcome message from the alien
 Story A - You choose to run! With the Ending 
 
 ![Story A - Ending](docs/images/game_images/story_a_ending.png)
+
+Story B - Guess the right password
+
+![Story B - Guess the Password](docs/images/game_images/story_b_guess.png)
+
+Story C - A room full of poisionous plants
+
+![Story C - Choose the antidote](docs/images/game_images/story_c_antidote.png)
+
+Story C - Ending
+
+![Story C - Ending](docs/images/game_images/story_c_ending.png)
 
 __________________________________________________________________________________
 
@@ -423,4 +449,5 @@ ___________________________________________________________________
 * Python, 2022, [PEP 8 Style Guide for Python Code](https://peps.python.org/pep-0008/), accessed 16 Sep 2022
 * NASA, 2022 [Heading Into (Orbital) Sunrise](https://www.nasa.gov/multimedia/imagegallery/iotd.html), accessed 19 Sep 2022
 * pypi.org, 2022 [argv 0.0.3](https://pypi.org/project/argv/), accessed 20 Sep 2022
+* python,org, 2022 [python.org](https://www.python.org/downloads/), accessed 23 Sep 2022
   
