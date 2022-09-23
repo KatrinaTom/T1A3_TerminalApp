@@ -251,6 +251,19 @@ Find repeating code and create these into functions.
 * Create a bash script to run the program
 * Create a virtual environment to import Python packages
 
+## Code Logic
+
+* Control Flow 
+
+Through the use of control flow, I was able to implement a Choose Your Own Adventure Story. While, If/Elif/Else statements.
+
+* Functions
+
+Use of functions allowed me to keep in line with Don't Repeat Yourself and PEP 8 style guide.
+
+* Error Validation - Graceful error handling
+
+Try, except allowed me to handle errors gracefully to keep in line with the narrative. 
 ____________________________________________________________________
 
 # Testing<a name="testing"></a>
@@ -333,7 +346,7 @@ The challenges have additional error handling to capture valueError.
 
 # Deployment<a name="deployment"></a>
 
-Deployment to GitHub [GitHub](https://github.com/KatrinaTom/T1A3_TerminalApp)
+Deployment to [GitHub](https://github.com/KatrinaTom/T1A3_TerminalApp)
 
 Source Folder
 -README.md
